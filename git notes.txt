@@ -171,7 +171,7 @@ PS D:\git work>
 
 Merge Conflict====================
  
- 
+ Add a remote repository as an origin to github:========================
  
  
  

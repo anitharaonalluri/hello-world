@@ -1,0 +1,218 @@
+=====================================reference w3 schools git======================
+
+
+RElease notes location after installation#
+file:///C:/Program%20Files/Git/ReleaseNotes.html
+
+
+
+git config --global user.name "anitha.test"
+git config --global user.email "anithaonlyforjobs@gmail.com"
+
+creating git folder
+mkdir myproject
+cd myproject
+
+Initialize Git
+git init
+output:
+D:\git work>git init
+Initialized empty Git repository in D:/git work/.git/
+
+on terminal
+git ls
+list of tracked and untracked files
+
+git status
+
+====================Git Staging Environment=======================
+As you are working, you may be adding, editing and removing files. But whenever you hit a milestone or finish a part of the work, you should add the files to a Staging Environment.
+
+Staged files are files that are ready to be committed to the repository you are working on. You will learn more about commit shortly.
+
+git add index.html
+
+PS D:\git work> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo1.html
+        git
+        index.txt
+
+Git Add More than One File==================
+git add --all
+Note: The shorthand command for git add --all is git add -A
+
+Git Commit===============
+Since we have finished our work, we are ready move from stage to commit for our repo.
+When we commit, we should always include a message.
+
+git commit -m "First release of Hello World!"
+
+[master (root-commit) 5486762] First release of Hello World!
+ 4 files changed, 13 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 bluestyle.css
+ create mode 100644 git
+ create mode 100644 index.html
+ 
+ Git Commit without Stage===============
+ Sometimes, when you make small changes, using the staging environment seems like a waste of time. It is possible to commit changes directly, skipping the staging environment. The -a option will automatically stage every changed, already tracked file.
+
+Let's add a small update to index.html:
+
+--short================
+
+And check the status of our repository. But this time, we will use the --short option to see the changes in a more compact way:
+Note: Short status flags are:
+
+?? - Untracked files
+A - Files added to stage
+M - Modified files
+D - Deleted files
+
+PS D:\git work> git status --short
+ M index.html
+ Git Commit Log=====================
+ git log
+ 
+ git help=======================
+ $ git help --all
+ 
+ give lot of commands.
+ 
+ Git Branch===============================
+ 
+ Working with Git Branches
+In Git, a branch is a new/separate version of the main repository.
+
+Let's say you have a large project, and you need to update the design on it.
+
+How would that work without and with Git:
+
+Without Git:
+
+Make copies of all the relevant files to avoid impacting the live version
+Start working with the design and find that code depend on code in other files, that also need to be changed!
+Make copies of the dependant files as well. Making sure that every file dependency references the correct file name
+EMERGENCY! There is an unrelated error somewhere else in the project that needs to be fixed ASAP!
+Save all your files, making a note of the names of the copies you were working on
+Work on the unrelated error and update the code to fix it
+Go back to the design, and finish the work there
+Copy the code or rename the files, so the updated design is on the live version
+(2 weeks later, you realize that the unrelated error was not fixed in the new design version because you copied the files before the fix)
+With Git:
+
+With a new branch called new-design, edit the code directly without impacting the main branch
+EMERGENCY! There is an unrelated error somewhere else in the project that needs to be fixed ASAP!
+Create a new branch from the main project called small-error-fix
+Fix the unrelated error and merge the small-error-fix branch with the main branch
+You go back to the new-design branch, and finish the work there
+Merge the new-design branch with main (getting alerted to the small error fix that you were missing)
+Branches allow you to work on different parts of a project without impacting the main branch.
+
+When the work is complete, a branch can be merged with the main project.
+
+You can even switch between branches and work on different projects without them interfering with each other.
+
+Branching in Git is very lightweight and fast!
+ 
+ 
+ New Git Branch===============
+ git branch hello-world-images
+ 
+We can see the new branch with the name "hello-world-images", but the * beside master specifies that we are currently on that branch.
+
+checkout is the command used to check out a branch. Moving us from the current branch, to the one specified at the end of the command:
+
+git add --all -- add all files
+
+git commit -m "Added image to Hello World" -- committed files to hello world images.
+
+Note: Using the -b option on checkout will create a new branch, and move to it, if it does not exist
+
+Switching Between Branches========================
+git checkout master
+Switched to branch 'master'
+
+Emergency Branch================
+
+git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'
+Now we have created a new branch from master, and changed to it. We can safely fix the error without disturbing the other branches.
+
+
+Git Branch Merge================
+Merge Branches=====
+
+PS D:\git work> git checkout master
+	Switched to branch 'master'
+PS D:\git work> git merge emergency-fix
+	Updating 57419a1..58e44cf
+	Fast-forward
+	 index.html | 2 +-
+	 1 file changed, 1 insertion(+), 1 deletion(-)
+	 
+	 As master and emergency-fix are essentially the same now, we can delete emergency-fix, as it is no longer needed
+
+
+PS D:\git work> git branch -d emergency-fix
+Deleted branch emergency-fix (was 58e44cf).
+PS D:\git work>
+
+
+Merge Conflict====================
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
